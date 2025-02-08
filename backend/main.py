@@ -27,6 +27,10 @@ session = Session()
 # get medicine name from image
 
 
+@app.route('/')
+def index():
+    return "Radhe Radhe"
+
 @app.route('/get_medicine_names', methods=['POST'])
 def main():
     """
@@ -138,4 +142,6 @@ def get_location():
 
 if __name__ == '__main__':
     # Run the Flask app in debug mode
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+
